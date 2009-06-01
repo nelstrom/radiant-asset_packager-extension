@@ -1,23 +1,10 @@
-# Uncomment this if you reference any of your controllers in activate
-# require_dependency 'application'
-
 class AssetPackagerExtension < Radiant::Extension
-  version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/asset_packager"
-  
-  # define_routes do |map|
-  #   map.namespace :admin, :member => { :remove => :get } do |admin|
-  #     admin.resources :asset_packager
-  #   end
-  # end
+  version "0.1"
+  description "An asset packager for Radiant, allowing you to server minified css and js files from your public directory."
+  url "http://wiki.github.com/nelstrom/radiant-asset_packager-extension"
   
   def activate
-    # admin.tabs.add "Asset Packager", "/admin/asset_packager", :after => "Layouts", :visibility => [:all]
-  end
-  
-  def deactivate
-    # admin.tabs.remove "Asset Packager"
+    Page.send :include, AssetPackagerTags
   end
   
 end

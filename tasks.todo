@@ -1,4 +1,5 @@
-rake update:
+rake tasks:
+- include tasks from asset_packager rails plugin
 ✓ to copy config/asset_packages.yml
 
 submodules:
