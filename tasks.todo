@@ -1,0 +1,9 @@
+rake update:
+- to copy config/asset_packages.yml
+
+submodules:
+- include rails plugin: asset_packager
+
+Radius:
+- javascript_include_merged
+- stylesheet_include_merged
