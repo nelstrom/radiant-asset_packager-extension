@@ -1,6 +1,6 @@
 Radius:
-- javascript_include_merged
-- stylesheet_include_merged
+✓ javascript_include_merged
+✓ stylesheet_include_merged
 
 rake tasks:
 ✓ include tasks from asset_packager rails plugin

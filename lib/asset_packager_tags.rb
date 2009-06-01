@@ -51,6 +51,30 @@ module AssetPackagerTags
   end
   
   desc %{
+    Include stylesheets from the public/stylesheets directory
+    Returns an html script tag for each file named in the 
+    @sources@ attribute. You can pass multiple filenames, 
+    separating them with commas. 
+
+    *Usage:*
+    <pre><code><r:stylesheet_include_tag sources="reset, 
+    typography, layout" [media="all|screen|print] /></code></pre>
+  }
+  tag 'stylesheet_link_tag' do |tag|
+    options =  {}
+    attributes = tag.attr || {}
+    options[:media] = attributes["media"]
+    options[:recursive] = (attributes["recursive"] == "true") ? true : nil
+    options[:cache]     = (attributes["cache"] == "true") ? true : nil
+    
+    sources = (attributes["sources"] == "all" ?
+      sources = :all :
+      sources = (attributes["sources"] || "").split(",").map{ |s| s.strip })
+    
+    stylesheet_link_tag( sources, options )
+  end
+  
+  desc %{
     Include javascripts from the public/javascripts directory
     Returns an html script tag for each file named in the 
     @sources@ attribute. You can pass multiple filenames, 
