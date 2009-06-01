@@ -1,10 +1,11 @@
+Radius:
+- javascript_include_merged
+- stylesheet_include_merged
+
 rake tasks:
-- include tasks from asset_packager rails plugin
+✓ include tasks from asset_packager rails plugin
 ✓ to copy config/asset_packages.yml
 
 submodules:
 ✓ include rails plugin: asset_packager
 
-Radius:
-- javascript_include_merged
-- stylesheet_include_merged
