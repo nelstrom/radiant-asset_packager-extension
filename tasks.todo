@@ -1,8 +1,8 @@
 rake update:
-- to copy config/asset_packages.yml
+✓ to copy config/asset_packages.yml
 
 submodules:
-- include rails plugin: asset_packager
+✓ include rails plugin: asset_packager
 
 Radius:
 - javascript_include_merged
