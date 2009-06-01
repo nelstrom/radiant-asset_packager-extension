@@ -1,0 +1,10 @@
+--- 
+javascripts: 
+- base: 
+  - prototype
+  - effects
+  - dragdrop
+  - controls
+  - application
+stylesheets: 
+- base: []
