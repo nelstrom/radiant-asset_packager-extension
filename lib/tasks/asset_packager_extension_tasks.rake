@@ -16,7 +16,7 @@ namespace :radiant do
       task :update => :environment do
         is_svn_or_dir = proc {|path| path =~ /\.svn/ || File.directory?(path) }
         puts "Copying assets from AssetPackagerExtension"
-        copy_dirs = ["/public/**/*", "/config/**/*"]
+        copy_dirs = ["/public/**/*", "/config/**/*", "/vendor/plugins/**/*"]
         copy_dirs.each do |dir|
           Dir[AssetPackagerExtension.root + dir].reject(&is_svn_or_dir).each do |file|
             path = file.sub(AssetPackagerExtension.root, '')
