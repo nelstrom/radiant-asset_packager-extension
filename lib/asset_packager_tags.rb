@@ -57,7 +57,7 @@ module AssetPackagerTags
     separating them with commas. 
 
     *Usage:*
-    <pre><code><r:stylesheet_include_tag sources="reset, 
+    <pre><code><r:stylesheet_link_tag sources="reset, 
     typography, layout" [media="all|screen|print] /></code></pre>
   }
   tag 'stylesheet_link_tag' do |tag|
